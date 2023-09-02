@@ -21,13 +21,14 @@ body {
 }
 
 #tableBox {
+    float: left;
     height: 500px;
     width: 850px;
     background: rgba(0, 128, 0, 0.5);
     border-radius: 20px;
     border: 3px solid silver;
     margin-top: 120px;
-    margin-left: 130px;
+    margin-left: 30px;
     box-shadow:0 0 50px 5px silver;
 }
 
@@ -53,10 +54,6 @@ body {
 
 .relative {
     position: relative;
-}
-
-.absolute {
-    position: absolute;
 }
 
 #parametersBox {
@@ -94,4 +91,32 @@ body {
 
 #submit:hover {
     border-color: yellow;
+}
+
+table {
+    float: right;
+    margin-right: 20px;
+    margin-top: 120px;
+    border-collapse: collapse;
+}
+th {
+    padding: 10px;
+    background-color: rgb(207, 35, 61);
+    color: white;
+}
+td {
+    text-align: center;
+    padding: 5px;
+}
+th:nth-child(odd) {
+    background-color: rgb(178, 37, 58);
+}
+tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+tr:nth-child(odd) {
+    background-color: rgb(234, 226, 226);
+}
+tr:hover {
+    background-color: rgb(202, 200, 200);
 }

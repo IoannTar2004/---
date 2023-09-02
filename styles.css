@@ -30,3 +30,36 @@ body {
     margin-left: 130px;
     box-shadow:0 0 50px 5px silver;
 }
+
+#graphics {
+    padding-top: 125px;
+    padding-left: 80px;
+}
+
+#y {
+    padding-left: 123px;
+    padding-top: 10px;
+}
+
+#x {
+    padding-left: 230px;
+    padding-top: 130px;
+}
+
+.label {
+    font-size: 13px;
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+#parameters {
+    height: 440px;
+    width: 420px;
+    background: rgba(255, 170, 0, 0.7);
+    border-radius: 20px;
+    left: 400px;
+    bottom: 350px;
+}

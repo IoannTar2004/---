@@ -20,7 +20,6 @@ body {
     color: white;
 }
 
-
 #tableBox {
     height: 500px;
     width: 850px;
@@ -56,11 +55,43 @@ body {
     position: relative;
 }
 
-#parameters {
+.absolute {
+    position: absolute;
+}
+
+#parametersBox {
     height: 440px;
     width: 420px;
-    background: rgba(255, 170, 0, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     left: 400px;
-    bottom: 350px;
+    bottom: 370px;
+}
+
+#parametersX {
+    font-size: 18px;
+}
+
+.coorHead {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+#submit {
+    margin-top: 20px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+    border-width: 3px;
+}
+
+#submit:hover {
+    border-color: yellow;
 }

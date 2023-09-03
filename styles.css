@@ -47,9 +47,50 @@ body {
     padding-top: 130px;
 }
 
-.label {
-    font-size: 13px;
+#coorRd2_x {
+    padding-left: 156px;
+    padding-top: 110px;
+}
+
+#coorR_x {
+    padding-left: 202px;
+    padding-top: 110px;
+}
+
+#coorRd2_y {
+    padding-left: 122px;
+    padding-top: 75px;
+}
+
+#coorR_y {
+    padding-left: 122px;
+    padding-top: 30px;
+}
+
+#coor-Rd2_x {
+    padding-left: 65px;
+    padding-top: 110px;
+}
+
+#coor-R_x {
+    padding-left: 25px;
+    padding-top: 110px;
+}
+
+#coor-Rd2_y {
+    padding-left: 122px;
+    padding-top: 163px;
+}
+
+#coor-R_y {
+    padding-left: 122px;
+    padding-top: 207px;
+}
+
+.coordinate {
+    font-size: 14px;
     position: absolute;
+    text-align: center;
 }
 
 .relative {

@@ -1,8 +1,3 @@
-document.getElementById('submit').addEventListener('click', () => {
-    let y = document.getElementById('inputY').value;
-    console.log(y);
-});
-
 for(let i = 1; i <= 3; i += 0.5) {
     document.getElementById(`b_${i}`).addEventListener('click', () => {
         document.getElementById('coorRd2_x').innerHTML = i / 2;
@@ -15,3 +10,29 @@ for(let i = 1; i <= 3; i += 0.5) {
         document.getElementById('coor-R_y').innerHTML = -i;
     });
 }
+
+document.getElementById('submit').addEventListener('click', () => {
+    let x = [];
+    let message = '';
+    let alertt = false;
+
+    for (let i = -3; i <= 3; i++) {
+        let dataX = document.getElementById(`cb_${i}`);
+        if(dataX.checked) {
+            x.push(dataX.value);
+        }
+    }
+    if (x.length == 0) {
+        message += 'Выберите хотя бы одно значение X!\n';
+        alertt = true;
+    }
+    
+    let dataY = document.getElementById('inputY').value;
+    if (!/\d/.test(dataY) || dataY <= -3 || dataY >= 3) {
+        message += 'Введите Y от -3 до 3!';
+        alertt = true;
+    }
+    if (alertt) {
+        alert(message);
+    }
+});

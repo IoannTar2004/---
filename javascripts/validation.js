@@ -1,4 +1,3 @@
-let r;
 for(let i = 1; i <= 3; i += 0.5) {
     document.getElementById(`b_${i}`).addEventListener('click', () => {
         document.getElementById('coorRd2_x').innerHTML = i / 2;
@@ -9,7 +8,8 @@ for(let i = 1; i <= 3; i += 0.5) {
         document.getElementById('coor-R_x').innerHTML = -i;
         document.getElementById('coor-Rd2_y').innerHTML = -i / 2;
         document.getElementById('coor-R_y').innerHTML = -i;
-        r = i;
+        
+        document.getElementById('inputR').value = i;
     });
 }
 

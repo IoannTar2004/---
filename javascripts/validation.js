@@ -13,7 +13,8 @@ for(let i = 1; i <= 3; i += 0.5) {
     });
 }
 
-document.getElementById('form').addEventListener('submit', (e) => {
+
+document.getElementById('submit').addEventListener('click', () => {
     let x = [];
     let message = '';
     let alertt = false;
@@ -35,8 +36,22 @@ document.getElementById('form').addEventListener('submit', (e) => {
         alertt = true;
     }
 
+    let data = {
+        inputX: x,
+        inputY: dataY,
+        inputR: document.getElementById('inputR').value,
+    };
     if (alertt) {
         alert(message);
-        e.preventDefault();
+    } else {
+        let xhr = new XMLHttpRequest;
+
+        xhr.open('POST', 'http://localhost:3000/script.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.send('data=' + JSON.stringify(data));
+        xhr.onload = function() {
+            addToTable(xhr.responseText);
+        }
     }
 });

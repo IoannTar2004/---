@@ -1,9 +1,11 @@
 <?php
     date_default_timezone_set('Europe/Moscow');
     $timeStart = microtime(true);
-    $arr_x = $_POST['checkbox'];
-    $y = $_POST['inputY'];
-    $r = $_POST['inputR'];
+    $json = json_decode($_POST['data'], true);
+    $arr_x = $json['inputX'];
+    $y = $json['inputY'];
+    $r = $json['inputR'];
+    
     for($i = 0; $i < count($arr_x); $i++) {
         $x = $arr_x[$i];
         if ($x >= 0 && $y >= 0) {

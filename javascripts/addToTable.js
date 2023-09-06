@@ -1,3 +1,3 @@
-let xhr = new XMLHttpRequest;
-xhr.open('GET', '../script.php', false);
-xhr.send()
+function addToTable(text) {
+    console.log(text);
+}

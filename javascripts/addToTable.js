@@ -3,7 +3,6 @@ function addToTable(response) {
     let text = response.split('<br>');
     for(let i = 0; i < text.length - 1; i++) {
         let tableData = text[i].split('|');
-        console.log(tableData);
         let inner = `
             <tr>
                 <td>${tableData[0]}</td>
@@ -12,5 +11,11 @@ function addToTable(response) {
                 <td>${tableData[3]}</td>
             </tr>`
         table.innerHTML += inner;
+        coordinatesParse(tableData[0]);
     }
+}
+
+function coordinatesParse(tableData) {
+    let coordinates = tableData.match(/-?\d+/g);
+    createDot(coordinates[0], coordinates[1], coordinates[2]);
 }

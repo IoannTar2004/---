@@ -10,6 +10,7 @@ for(let i = 1; i <= 3; i += 0.5) {
         document.getElementById('coor-R_y').innerHTML = -i;
         
         document.getElementById('inputR').value = i;
+        createDot();
     });
 }
 

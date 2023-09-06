@@ -19,7 +19,7 @@ document.getElementById('submit').addEventListener('click', () => {
     let message = '';
     let alertt = false;
 
-    for (let i = -3; i <= 3; i++) {
+    for (let i = -3; i <= 5; i++) {
         let dataX = document.getElementById(`cb_${i}`);
         if(dataX.checked) {
             x.push(dataX.value);

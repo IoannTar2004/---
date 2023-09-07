@@ -1,12 +1,22 @@
-function createDot(r, x, y) {
-    let w = 125;
-    let h = 125;
-    let whiteBack = document.getElementById('whiteBack');
-    let ctx = whiteBack.getContext('2d');
-    ctx.beginPath()
-    ctx.fillStyle = 'red';
-    console.log(w + x/r*90, h - y/r*90);
-    ctx.arc(w + x/r*90, h - y/r*90, 2, 2*Math.PI, false);
-    ctx.closePath();
-    ctx.fill();
+function createDot(r, x, y, color) {
+    const w = 123 + x/r*90;
+    const h = 124 - y/r*90;
+    let canvas = document.getElementById('dots');
+
+    if (w > 0 && w < 250 && h > 0 && h < 250) {
+        canvas.innerHTML += `<div class="dot" style="margin-left: ${w}px; margin-top: ${h}px; background: ${color}">`;
+    }
+    
+}
+function changeDot(r) {
+    let dots = document.getElementById('dots');
+    dots.innerHTML = '';
+
+    let dotsBuffer = document.getElementById('dotsBuffer').value.split('|');
+    dotsBuffer.pop();
+    console.log(dotsBuffer);
+    for(let dots of dotsBuffer) {
+        let data = dots.split(',');
+        createDot(r, data[0], data[1], data[2]);
+    }
 }

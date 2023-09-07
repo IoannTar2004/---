@@ -11,11 +11,18 @@ function addToTable(response) {
                 <td>${tableData[3]}</td>
             </tr>`
         table.innerHTML += inner;
-        coordinatesParse(tableData[0]);
+        coordinatesParse(tableData[0], tableData[1]);
     }
 }
 
-function coordinatesParse(tableData) {
-    let coordinates = tableData.match(/-?\d+/g);
-    createDot(coordinates[0], coordinates[1], coordinates[2]);
+function coordinatesParse(tableData, status) {
+    let coordinates = tableData.match(/-?\d+\.?\d*/g);
+    let dotsBuffer = document.getElementById('dotsBuffer');
+    if (status == 'Попал!') {
+        createDot(coordinates[0], coordinates[1], coordinates[2], 'lime');
+        dotsBuffer.value += `${coordinates[1]},${coordinates[2]}, lime|`;
+    } else {
+        createDot(coordinates[0], coordinates[1], coordinates[2], 'red');
+        dotsBuffer.value += `${coordinates[1]},${coordinates[2]}, red|`;
+    }
 }
